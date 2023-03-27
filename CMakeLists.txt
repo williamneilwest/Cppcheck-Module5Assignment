@@ -6,7 +6,7 @@ add_executable(QuestionableCode_Module_5_Assignment_ QuestionableCode.cpp)
 
 find_program(CPPCHECK_EXECUTABLE cppcheck)
 if(CPPCHECK_EXECUTABLE)
-    set(CPPCHECK_ARGS "--enable=all" "--inconclusive" "--xml" "--xml-version=2" "--output-file=cppcheck_report.xml" "${CMAKE_SOURCE_DIR}")
+    set(CPPCHECK_ARGS "--enable=all" "--inconclusive" "--xml" "--xml-version=2" "--output-file=cppcheck_report.xml" "${CMAKE_SOURCE_DIR}/QuestionableCode.cpp")
     add_custom_command(TARGET QuestionableCode_Module_5_Assignment_
             POST_BUILD
             COMMAND ${CPPCHECK_EXECUTABLE} ${CPPCHECK_ARGS}
